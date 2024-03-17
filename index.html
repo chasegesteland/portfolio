@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<img src="/images/Torrey_Cliffs.jpg" alt="Torrey" style="max-width:100%;height:auto">
+<div class="sidebar">
+    <h2>Your Name</h2>
+    <nav class="nav">
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#research-interests">Research Interests</a>
+    </nav>
+    <div class="background-selector">
+        <button onclick="changeBackground('bg1.jpg')">Background 1</button>
+        <button onclick="changeBackground('bg2.jpg')">Background 2</button>
+        <button onclick="changeBackground('bg3.jpg')">Background 3</button>
+    </div>
+</div>
 
+<div class="main-content">
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Some information about you...</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Details about your projects...</p>
+    </section>
+    <section id="research-interests">
+        <h2>Research Interests</h2>
+        <p>Your research interests...</p>
+    </section>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
