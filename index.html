@@ -2,41 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Chase Gesteland</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+
+        .container-switch {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        }
+
+        .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+
+        .invert-colors{
+            background-color: black;
+            color: white
+        }
+
+    </style>
 </head>
 <body>
-
-<div class="sidebar">
-    <h2>Your Name</h2>
-    <nav class="nav">
-        <a href="#about-me">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#research-interests">Research Interests</a>
-    </nav>
-    <div class="background-selector">
-        <button onclick="changeBackground('bg1.jpg')">Background 1</button>
-        <button onclick="changeBackground('bg2.jpg')">Background 2</button>
-        <button onclick="changeBackground('bg3.jpg')">Background 3</button>
+    <div class="container">
+        <div>
+            <h1>Chase</h1>
+            <p style="font-size: 24px;">Working on a PhD and other things</p>
+            <a style="font-size: 24px;" href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
+        </div>
     </div>
-</div>
 
-<div class="main-content">
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>Some information about you...</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Details about your projects...</p>
-    </section>
-    <section id="research-interests">
-        <h2>Research Interests</h2>
-        <p>Your research interests...</p>
-    </section>
-</div>
+    <div class="container-switch">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
 
-<script src="script.js"></script>
+    <script>
+        function toggleInvert(slider){
+            if (slider.value == 1){
+                document.body.classList.add('invert-colors');
+            } else{
+                document.body.classList.remove('invert-colors');
+            }
+        }
+    </script>
 </body>
 </html>
