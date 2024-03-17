@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.nav {
+    margin: 20px 0;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.background-selector button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
