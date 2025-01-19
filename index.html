@@ -21,7 +21,7 @@
             background-color: white;
             color: black;
             font-family: 'Chicago', sans-serif;
-            transition: background-color 0.8s ease, color 0.8s ease;
+            transition: background-color 0.8s ease, color 0.8s ease; /* Smooth transition for safe areas */
         }
 
         .container {
@@ -128,13 +128,15 @@
             const themeColorMeta = document.getElementById("theme-color-meta");
 
             if (checkbox.checked) {
+                document.documentElement.style.backgroundColor = 'black'; // Sync safe areas with dark mode
                 document.body.style.backgroundColor = 'black';
                 text.style.color = 'white';
-                themeColorMeta.setAttribute('content', 'black'); // Updates the theme color
+                themeColorMeta.setAttribute('content', 'black'); // Update theme color for browser UI
             } else {
+                document.documentElement.style.backgroundColor = 'white'; // Sync safe areas with light mode
                 document.body.style.backgroundColor = 'white';
                 text.style.color = 'black';
-                themeColorMeta.setAttribute('content', 'white'); // Updates the theme color
+                themeColorMeta.setAttribute('content', 'white'); // Update theme color for browser UI
             }
         }
     </script>
