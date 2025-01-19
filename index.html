@@ -7,7 +7,9 @@
     <style>
         @font-face {
             font-family: 'Chicago';
-            src: local('Chicago'), url('https://example.com/chicago.woff2') format('woff2'); /* Replace with actual font file if available */
+            src: url('fonts/ChicagoKare-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
 
         body, html {
@@ -17,7 +19,7 @@
             background-color: white;
             color: black;
             font-family: 'Chicago', sans-serif;
-            transition: background-color 0.8s ease, color 0.8s ease; /* Smooth transition for body background and text color */
+            transition: background-color 0.8s ease, color 0.8s ease;
         }
 
         .container {
@@ -31,10 +33,14 @@
             align-items: center;
             text-align: center;
             font-family: 'Chicago', sans-serif;
+            padding: 20px; /* Adds spacing around the text */
+            box-sizing: border-box; /* Ensures padding is included in element's total width/height */
         }
 
         #text {
-            transition: color 0.8s ease; /* Smooth transition for text color */
+            transition: color 0.8s ease;
+            max-width: 90%; /* Prevents text from stretching too wide */
+            word-wrap: break-word; /* Ensures text wraps properly on smaller screens */
         }
 
         .container-switch {
@@ -64,7 +70,7 @@
             right: 0;
             bottom: 0;
             background-color: #ccc;
-            transition: background-color 0.8s ease; /* Match the duration of the light/dark mode fade */
+            transition: background-color 0.8s ease;
         }
 
         .slider:before {
@@ -75,7 +81,8 @@
             left: 4px;
             bottom: 4px;
             background-color: white;
-            transition: transform 0.8s ease; /* Match the duration of the light/dark mode fade */
+            border-radius: 50%;
+            transition: transform 0.8s ease;
         }
 
         input:checked + .slider {
