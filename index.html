@@ -13,10 +13,11 @@
             font-style: normal;
         }
 
-        body, html {
+        html, body {
             height: 100%;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Prevent scrolling */
             background-color: white;
             color: black;
             font-family: 'Chicago', sans-serif;
@@ -36,6 +37,7 @@
             font-family: 'Chicago', sans-serif;
             padding: 20px;
             box-sizing: border-box;
+            transition: background-color 0.8s ease, color 0.8s ease; /* Sync safe area transitions */
         }
 
         #text {
@@ -107,7 +109,7 @@
     <div class="container">
         <div id="text">
             <h1>Chase</h1>
-            <p style="font-size: 24px;">Working on a PhD and other things</p>
+            <p style="font-size: 24px;">Working on a PhD, and other things.</p>
             <a style="font-size: 24px;" href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
         </div>
     </div>
