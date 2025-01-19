@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white" id="theme-color-meta">
     <title>Chase Gesteland</title>
     <style>
         @font-face {
@@ -24,29 +25,29 @@
 
         .container {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: env(safe-area-inset-top); /* Safe area for top-notch */
+            left: env(safe-area-inset-left); /* Safe area for left notch */
+            right: env(safe-area-inset-right); /* Safe area for right notch */
+            bottom: env(safe-area-inset-bottom); /* Safe area for bottom notch */
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             font-family: 'Chicago', sans-serif;
-            padding: 20px; /* Adds spacing around the text */
-            box-sizing: border-box; /* Ensures padding is included in element's total width/height */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         #text {
             transition: color 0.8s ease;
-            max-width: 90%; /* Prevents text from stretching too wide */
-            word-wrap: break-word; /* Ensures text wraps properly on smaller screens */
+            max-width: 90%;
+            word-wrap: break-word;
         }
 
         .container-switch {
             position: absolute;
             right: 25px;
-            top: 25px;
+            top: calc(env(safe-area-inset-top) + 25px); /* Adjust for safe area */
         }
 
         .switch {
@@ -106,7 +107,7 @@
     <div class="container">
         <div id="text">
             <h1>Chase</h1>
-            <p style="font-size: 24px;">Working on a PhD, and other things.</p>
+            <p style="font-size: 24px;">Working on a PhD and other things</p>
             <a style="font-size: 24px;" href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
         </div>
     </div>
@@ -122,13 +123,16 @@
         function toggleInvert() {
             const checkbox = document.getElementById("myCheckbox");
             const text = document.getElementById("text");
+            const themeColorMeta = document.getElementById("theme-color-meta");
 
             if (checkbox.checked) {
                 document.body.style.backgroundColor = 'black';
                 text.style.color = 'white';
+                themeColorMeta.setAttribute('content', 'black'); // Updates the theme color
             } else {
                 document.body.style.backgroundColor = 'white';
                 text.style.color = 'black';
+                themeColorMeta.setAttribute('content', 'white'); // Updates the theme color
             }
         }
     </script>
