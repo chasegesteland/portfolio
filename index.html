@@ -3,117 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="white" id="theme-color-meta">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Personal page of Chase Gesteland - PhD student and professional.">
+    <meta name="theme-color" content="#222" id="theme-color-meta">
+    <meta name="description" content="Personal page of Chase Gesteland - PhD student.">
     <title>Chase Gesteland</title>
-    <style>
-        @font-face {
-            font-family: 'Chicago';
-            src: url('fonts/ChicagoKare-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevent scrolling */
-            font-family: 'Chicago', Arial, sans-serif;
-            transition: background-color 0.8s ease, color 0.8s ease;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        #text {
-            transition: color 0.8s ease;
-            max-width: 90%;
-            word-wrap: break-word;
-            margin: 20px 0; /* Add spacing between the GIFs and text */
-        }
-
-        .gif-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0; /* Add spacing around GIFs */
-        }
-
-        .gif-container img {
-            max-width: 100px; /* Adjust size of GIFs */
-            height: auto;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #0077b5; /* LinkedIn blue */
-        }
-
-        @media (prefers-color-scheme: light) {
-            html, body {
-                background-color: white;
-                color: black;
-            }
-
-            #theme-color-meta {
-                content: "white";
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            html, body {
-                background-color: black;
-                color: white;
-            }
-
-            #theme-color-meta {
-                content: "black";
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="gif-container">
-        <!-- Radiation Symbol GIF -->
-        <img src="gifs/rad-piskel.gif" alt="Radiation Symbol">
-    </div>
-    <div id="text">
-        <h1>Chase</h1>
-        <p style="font-size: 24px;">Working on a PhD, and other things.</p>
-        <a style="font-size: 24px;" href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
-    </div>
-    <div class="gif-container">
-        <!-- Printer GIF -->
-        <img src="gifs/LPBF.gif" alt="3D Printer">
-    </div>
+    <header class="site-header">
+        <img src="images/Gesteland-Chase-low.png" alt="Headshot of Chase Gesteland" class="headshot" style="display: block; margin: 0 auto; border-radius: 50%; max-width: 150px;">
+        <h1>Chase Gesteland</h1>
+        <p>PhD Student | Graduate Student Researcher</p>
+        <div class="tab-bar">
+            <button class="tab active" data-tab="about">About</button>
+            <button class="tab" data-tab="education">Education</button>
+            <button class="tab" data-tab="experience">Experience</button>
+            <button class="tab" data-tab="cv">CV</button>
+            <button class="tab" data-tab="contact">Contact</button>
+        </div>
+    </header>
+    <main id="text">
+        <section id="about" class="tab-content active">
+            <h2>About</h2>
+            <p>Nuclear Materials PhD student studying additive manufacturing and materials for extreme environments.</p>
+        </section>
+        <section id="education" class="tab-content">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Ph.D. in Nuclear Engineering</strong>, University of California, Berkeley [2023-present]</li>
+                <li><strong>M.Eng. in Nuclear Engineering</strong>, University of California, Berkeley [2022-2023]</li>
+                <li><strong>Honors B.S. in Mechanical Engineering</strong>, University of Utah [2018-2022]</li>
+            </ul>
+        </section>
+        <section id="experience" class="tab-content">
+            <h2>Experience & Fellowships</h2>
+            <ul>
+                <li><strong>Nuclear Science and Security Consortium (NSSC) Graduate Fellow</strong> – University of California, Berkeley / Lawrence Livermore National Laboratory [Jan 2025-present]</li>
+                <ul style="margin-left: 20px;">
+                    <li>Researching laser annealing and additive manufacturing of aerospace-grade aluminum alloys at Lawrence Livermore National Laboratory</li>
+                </ul>
+                <br>
+                <li><strong>Graduate Student Researcher</strong> – University of California, Berkeley [May 2023-present]</li>
+                <br>
+                <li><strong>Graduate Student Intern</strong> – Lawrence Livermore National Laboratory [July 2024-Oct 2024]</li>
+                <ul style="margin-left: 20px;">
+                    <li>Materials and Chemistry Institute Internship. Researched diode laser annealing and extreme environmental testing for aerospace and nuclear materials</li>
+        </section>
+        <section id="cv" class="tab-content">
+            <h2><i>Curriculum Vitae</i></h2>
+            <h3>Publications</h3>
+            <hr>
+            <p><i>Irradiation-induced gas production in REBCO-based magnet materials used for future compact fusion reactors</i></p>
+            <p>Chris Reis, <strong>Chase Gesteland</strong>, Mehdi Balooch, Kooknoh Yoon, Jonathan Lee, Masami Iio, Toru Ogitsu, Makoto Yoshida, Hamilton Parrish, Ella Yarossi, Tengming Shen, Yongqiang Wang, Lee Bernstein, Soren Prestemon, Peter Hosemann; <i>Irradiation-induced gas production in REBCO-based magnet materials used for future compact fusion reactors</i>. J. Appl. Phys. 21 June 2025; 137 (23): 235101. <a href="https://doi.org/10.1063/5.0263824" target="_blank">https://doi.org/10.1063/5.0263824</a></p>
+            <hr>
+            <h3>Presentations & Talks</h3>
+            <ul style="list-style: disc; padding: 0;">
+                <p><i>UCB-LLNL Materials & Manufacturing Collaboration Workshop</i> (<strong>Invited Lecturer</strong>) – University of California, Berkeley [Sept 2025]</p>
+                <p><i>PrintSprint 3D Printing Bootcamp</i> (<strong>Invited Lecturer</strong>) – University of California, Berkeley [Sept. 2025]</p>
+                <p><i>Influence of Build Direction and Part Size on the Microstructure and Mechanical Properties of 3D Printed 316 Stainless Steel</i> – The Minerals, Metals, & Materials Society 2025</p>
+                <p><i>Microstructural Control of Additively Manufactured Ti6Al4V via in-situ Laser Annealing</i> – The Minerals, Metals, & Materials Society 2025</p>
+            </section>
+        <section id="contact" class="tab-content">
+            <h2>Contact</h2>
+            <a href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
+            <!-- Add email or other contact info if desired -->
+        </section>
+    </main>
     <script>
-        // Dynamically update the theme-color meta tag based on the user's settings
-        function updateThemeColor() {
-            const themeColorMeta = document.getElementById("theme-color-meta");
-            const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            themeColorMeta.setAttribute("content", isDarkMode ? "black" : "white");
-        }
-
-        // Initial setup
-        updateThemeColor();
-
-        // Listen for changes to the user's system settings
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateThemeColor);
+        // Tab switching logic
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+                // Add active to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
     </script>
 </body>
 </html>
