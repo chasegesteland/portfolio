@@ -1,89 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#222" id="theme-color-meta">
-    <meta name="description" content="Personal page of Chase Gesteland - PhD student.">
-    <title>Chase Gesteland</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="site-header">
-        <img src="images/Gesteland-Chase-low.png" alt="Headshot of Chase Gesteland" class="headshot" style="display: block; margin: 0 auto; border-radius: 50%; max-width: 150px;">
-        <h1>Chase Gesteland</h1>
-        <p>PhD Student | Graduate Student Researcher</p>
-        <div class="tab-bar">
-            <button class="tab active" data-tab="about">About</button>
-            <button class="tab" data-tab="education">Education</button>
-            <button class="tab" data-tab="experience">Experience</button>
-            <button class="tab" data-tab="cv">CV</button>
-            <button class="tab" data-tab="contact">Contact</button>
-        </div>
-    </header>
-    <main id="text">
-        <section id="about" class="tab-content active">
-            <h2>About</h2>
-            <p>Nuclear Materials PhD student studying additive manufacturing and materials for extreme environments.</p>
-        </section>
-        <section id="education" class="tab-content">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Ph.D. in Nuclear Engineering</strong>, University of California, Berkeley [2023-present]</li>
-                <li><strong>M.Eng. in Nuclear Engineering</strong>, University of California, Berkeley [2022-2023]</li>
-                <li><strong>Honors B.S. in Mechanical Engineering</strong>, University of Utah [2018-2022]</li>
-            </ul>
-        </section>
-        <section id="experience" class="tab-content">
-            <h2>Experience & Fellowships</h2>
-            <ul>
-                <li><strong>Nuclear Science and Security Consortium (NSSC) Graduate Fellow</strong> – University of California, Berkeley / Lawrence Livermore National Laboratory [Jan 2025-present]</li>
-                <ul style="margin-left: 20px;">
-                    <li>Researching fabrication of and radiation damage in first wall materials at Lawrence Livermore National Laboratory</li>
-                </ul>
-                <br>
-                <li><strong>Graduate Student Researcher</strong> – University of California, Berkeley [May 2023-present]</li>
-                <br>
-                <li><strong>Graduate Student Intern</strong> – Lawrence Livermore National Laboratory [July 2024-Oct 2024]</li>
-                <ul style="margin-left: 20px;">
-                    <li>Materials and Chemistry Institute Internship. Researched diode laser annealing and extreme environmental testing for aerospace and nuclear materials</li>
-        </section>
-        <section id="cv" class="tab-content">
-            <h2><i>Curriculum Vitae</i></h2>
-            <h3>Publications</h3>
-            <hr>
-            <p><i>Irradiation-induced gas production in REBCO-based magnet materials used for future compact fusion reactors</i></p>
-            <p>Chris Reis, <strong>Chase Gesteland</strong>, Mehdi Balooch, Kooknoh Yoon, Jonathan Lee, Masami Iio, Toru Ogitsu, Makoto Yoshida, Hamilton Parrish, Ella Yarossi, Tengming Shen, Yongqiang Wang, Lee Bernstein, Soren Prestemon, Peter Hosemann; <i>Irradiation-induced gas production in REBCO-based magnet materials used for future compact fusion reactors</i>. J. Appl. Phys. 21 June 2025; 137 (23): 235101. <a href="https://doi.org/10.1063/5.0263824" target="_blank">https://doi.org/10.1063/5.0263824</a></p>
-            <hr>
-            <h3>Presentations & Talks</h3>
-            <ul style="list-style: disc; padding: 0;">
-                <p><i>UCB-LLNL Materials & Manufacturing Collaboration Workshop</i> (<strong>Invited Lecturer</strong>) – University of California, Berkeley [Sept 2025]</p>
-                <p><i>PrintSprint 3D Printing Bootcamp</i> (<strong>Invited Lecturer</strong>) – University of California, Berkeley [Sept. 2025]</p>
-                <p><i>Influence of Build Direction and Part Size on the Microstructure and Mechanical Properties of 3D Printed 316 Stainless Steel</i> – The Minerals, Metals, & Materials Society 2025</p>
-                <p><i>Microstructural Control of Additively Manufactured Ti6Al4V via in-situ Laser Annealing</i> – The Minerals, Metals, & Materials Society 2025</p>
-            </section>
-        <section id="contact" class="tab-content">
-            <h2>Contact</h2>
-            <a href="https://www.linkedin.com/in/chasegesteland/" target="_blank">LinkedIn</a>
-            <!-- Add email or other contact info if desired -->
-        </section>
-    </main>
-    <script>
-        // Tab switching logic
-        const tabs = document.querySelectorAll('.tab');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active from all tabs and contents
-                tabs.forEach(t => t.classList.remove('active'));
-                tabContents.forEach(tc => tc.classList.remove('active'));
-                // Add active to clicked tab and corresponding content
-                tab.classList.add('active');
-                const tabName = tab.getAttribute('data-tab');
-                document.getElementById(tabName).classList.add('active');
-            });
-        });
-    </script>
-</body>
-</html>
+<HTML>
+<HEAD>
+    <TITLE>Chase Gesteland, PhD Student</TITLE>
+    <META name="description" content="Chase Gesteland Website">
+    <META name="keywords" content="Gesteland, Chase, Jesteland, nuclear, power, materials, additive, Berkeley">
+    <style>
+    div {
+        margin: 30px 80px 20px 80px;
+    }
+    </style>
+</HEAD>
+
+<BODY>
+    <FONT FACE="trebuchet ms">
+
+        <div>
+            <p style="font-family:menlo">&nbsp;</p>
+            <p style="font-family:menlo">&nbsp;</p>
+            <p style="font-family:menlo">
+                Chase is a Ph.D. student researching materials for extreme environments at
+                <strong>
+                    <a href="https://nuc.berkeley.edu/about/" title="UC Berkeley" style="color:dodgerblue">UC Berkeley</a>
+                </strong>
+            </p>
+            <p style="font-family:menlo">
+                Reachable through 
+                <em>
+                    <a href="https://www.linkedin.com/in/chasegesteland/" title="LinkedIn" style="color:dodgerblue">LinkedIn</a>
+                </em>
+            </p>
+            <p style="font-family:menlo">&nbsp;</p>
+        </DIV>
+    </FONT>
+</BODY>
+</HTML>
