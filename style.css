@@ -11,8 +11,11 @@ a:focus-visible { outline: 3px solid #000; outline-offset: 6px; }
 .site-header { display: flex; align-items: center; gap: 44px; padding: 26px 36px 24px 0; }
 .mark { width: 96px; height: 96px; background: #000; flex: 0 0 auto; }
 .site-name { font-size: clamp(48px, 6.4vw, 96px); font-weight: 700; line-height: 1.05; letter-spacing: -0.045em; text-decoration: none; }
-.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); min-height: calc(100vh - 150px); }
-nav { border-right: 7px solid #000; padding: 32px 30px 70px 68px; }
+.layout { display: grid; grid-template-columns: 275px minmax(0, 1fr); min-height: calc(100vh - 150px); }
+nav {
+  border-right: 7px solid #000;
+  padding: 32px 45px 70px 45px; /* right padding was 30px */
+}
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
 nav a { display: inline-block; font-size: 30px; font-weight: 600; line-height: 1.3; text-decoration: none; }
 nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; text-decoration-thickness: 2px; }
